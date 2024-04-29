@@ -1,0 +1,94 @@
+*5H*, *6H*, *7D*, *9D*
+USER HAS WON PATTERN: 1
+*2D*, *2H*, *3D*, *3H*
+2H, 3H, 2D, 3D
+*2C*, *3C*, *4C*, *5C*
+USER HAS WON PATTERN: 2
+*6C*, *7C*, *8C*, *9C*
+*KD*, *KS*, *KC*, *QS*
+USER HAS WON PATTERN: 3
+*JC*, *JD*, *JS*, *JH*
+*2C*, *3C*, *4C*, 
+*2C*, *3C*, *4C*, *2H*
+USER HAS WON PATTERN: 4
+*2S*, *3S*, *4S*, *5S*
+*2S*, *3S*, *5S*, *7S*
+USER HAS WON PATTERN: 5
+*2H*, *3H*, *5H*, *7H*
+*KS*, *KC*, *KH*, *KD*
+AS, AC, AH, AD
+6S, 6C, 6H, 6D
+USER HAS WON PATTERN: 6
+*QS*, *QD*, *QC*, *QH*
+2H, 3H, 4H, 5H
+, , , 
+, , , 
+USER HAS WON PATTERN: 7
+2D, 3D, 4D, 5D
+, , , 
+, , , 
+2H, 4H, 6H, 8H
+, , , 
+, , , 
+USER HAS WON PATTERN: 8
+3D, 5D, 7D, 9D
+, , , 
+, , , 
+*AS*, *8S*, *AD*, *8D*
+*8C*, *AC*, *8H*, *AH*
+*2H*, *3H*, *4H*, *5H*
+USER HAS WON PATTERN: 1
+*6H*, *7H*, *8H*, *9H*
+2H, 3H, 4H, 5H
+2D, 3D, 4D, 5D
+*2C*, *3C*, *4C*, *5C*
+USER HAS WON PATTERN: 2
+*6C*, *7C*, *8C*, *9C*
+2C, 5C, 7D, 8H
+2H, 4S, 5H, 9S
+4C, 5S, 2H, 3H
+*KD*, *KS*, *QS*, *QD*
+USER HAS WON PATTERN: 3
+*KD*, *KS*, *KH*, *KC*
+*5C*, *5D*, *5H*, *5S*
+USER HAS WON PATTERN: 4
+*9S*, *4C*, *8H*, *7H*
+*3H*, *5H*, *7H*, 9H
+*3H*, *2H*, *5H*, *7H*
+USER HAS WON PATTERN: 5
+*2S*, *3S*, *5S*, *7S*
+10S, 10C, *5S*, *5C*
+*5S*, 4S, 2S, 3S
+5S, 3S, 7S, *9S*
+*9S*, *9H*, *9C*, *9D*
+5C, 5H, 5S, 5D
+USER HAS WON PATTERN: 6
+*AH*, *AC*, *AD*, *AS*
+2H, 3H, 4H, 5H
+, , , 
+, , , 
+USER HAS WON PATTERN: 7
+2C, 3C, 4C, 5C
+, , , 
+, , , 
+3H, 5H, 7H, 9H
+, , , 
+, , , 
+USER HAS WON PATTERN: 8
+2D, 4D, 6D, 8D
+, , , 
+, , , 
+*2H*, *2D*, *7H*, *2H*
+*7H*, , , 
+, 
+USER HAS WON PATTERN: 9
+*AH*, *10D*, *AH*, *10C*
+*10D*, , , 
+*AC*, *AH*, *8C*, *8H*
+USER HAS WON PATTERN: 10
+*8S*, *8D*, *AS*, *AD*
+*AH*, *KH*, *QH*, *JH*
+USER HAS WON PATTERN: 11
+*AS*, *KS*, *QS*, *JS*
+*JC*, *JS*, *AC*, *AS*
+*AD*, *JS*, *AH*, *JC*
