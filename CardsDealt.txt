@@ -117,3 +117,21 @@ QH, QD, QS, QC
 3D, 5D, 7D, 9D
 2H, 2D, 7H, 2C
 AH, 10D, 10C, AS
+Date: 05/02/2024
+5C, 6C, 7C, 8C
+8C, 8S, AC, AS
+AH, 8H, AD, 8D
+AH, KH, QH, JH
+AC, KC, JC, QC
+JC, JS, AC, AS
+JC, JS, AD, AS
+AH, 5H, AC, 5C
+AH, AD, 6H, 6D
+7H, 8H, 2H, 3H
+AC, KC, QC, 2C
+5C, 6C, 7C, 9C
+5C, 6C, 7C, 8C
+KC, QC, JC, KS
+QS, JS, KD, JD
+Date: 05/05/2024
+4H, 5H, 6H, 9H

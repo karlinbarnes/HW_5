@@ -180,3 +180,24 @@ USER HAS WON PATTERN: 8
 USER HAS WON PATTERN: 9
 *AH*, *10D*, *AH*, *10C*
 *10D*, , , 
+5C, 6C, 7C, 8C
+*8C*, *8S*, *AC*, *AS*
+USER HAS WON PATTERN: 10
+*AH*, *8H*, *AD*, *8D*
+*AH*, *KH*, *QH*, *JH*
+USER HAS WON PATTERN: 11
+*AC*, *KC*, *JC*, *QC*
+*JC*, *JS*, *AC*, *AS*
+*JC*, *JS*, *AD*, *AS*
+*AH*, *5H*, AC, 5C
+*AH*, *AD*, *6H*, *6D*
+USER HAS WON PATTERN: 1
+*7H*, *8H*, *2H*, *3H*
+*AC*, *KC*, *QC*, *2C*
+USER HAS WON PATTERN: 2
+*5C*, *6C*, *7C*, *9C*
+5C, 6C, 7C, 8C
+*KC*, *QC*, *JC*, *KS*
+USER HAS WON PATTERN: 3
+*QS*, *JS*, *KD*, *JD*
+*4H*, *5H*, *6H*, *9H*
