@@ -1627,3 +1627,202 @@
 [05/01/2024] Writing to: ArtDealersSelection.txt
 [05/01/2024] Clearing card panel...
 [05/01/2024] Card panel cleared.
+[05/02/2024] Quitting game...
+[05/02/2024] Selected Card: 5C
+[05/02/2024] Selected Card: 6C
+[05/02/2024] Selected Card: 7C
+[05/02/2024] Selected Card: 8C
+[05/02/2024] Current Round: 10
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [5C]
+[05/02/2024] In builder: [5C, 6C]
+[05/02/2024] In builder: [5C, 6C, 7C]
+[05/02/2024] In builder: [5C, 6C, 7C, 8C]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: 8C
+[05/02/2024] Selected Card: 8S
+[05/02/2024] Selected Card: AC
+[05/02/2024] Selected Card: AS
+[05/02/2024] Current Round: 10
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [*8C*]
+[05/02/2024] In builder: [*8C*, *8S*]
+[05/02/2024] In builder: [*8C*, *8S*, *AC*]
+[05/02/2024] In builder: [*8C*, *8S*, *AC*, *AS*]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: AH
+[05/02/2024] Selected Card: 8H
+[05/02/2024] Selected Card: AD
+[05/02/2024] Selected Card: 8D
+[05/02/2024] Current Round: 10
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [*AH*]
+[05/02/2024] In builder: [*AH*, *8H*]
+[05/02/2024] In builder: [*AH*, *8H*, *AD*]
+[05/02/2024] In builder: [*AH*, *8H*, *AD*, *8D*]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: AH
+[05/02/2024] Selected Card: KH
+[05/02/2024] Selected Card: QH
+[05/02/2024] Selected Card: JH
+[05/02/2024] Current Round: 11
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [*AH*]
+[05/02/2024] In builder: [*AH*, *KH*]
+[05/02/2024] In builder: [*AH*, *KH*, *QH*]
+[05/02/2024] In builder: [*AH*, *KH*, *QH*, *JH*]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: AC
+[05/02/2024] Selected Card: KC
+[05/02/2024] Selected Card: JC
+[05/02/2024] Selected Card: QC
+[05/02/2024] Current Round: 11
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [*AC*]
+[05/02/2024] In builder: [*AC*, *KC*]
+[05/02/2024] In builder: [*AC*, *KC*, *JC*]
+[05/02/2024] In builder: [*AC*, *KC*, *JC*, *QC*]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: JC
+[05/02/2024] Selected Card: JS
+[05/02/2024] Selected Card: AC
+[05/02/2024] Selected Card: AS
+[05/02/2024] Current Round: 12
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [*JC*]
+[05/02/2024] In builder: [*JC*, *JS*]
+[05/02/2024] In builder: [*JC*, *JS*, *AC*]
+[05/02/2024] In builder: [*JC*, *JS*, *AC*, *AS*]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: JC
+[05/02/2024] Selected Card: JS
+[05/02/2024] Selected Card: AD
+[05/02/2024] Selected Card: AS
+[05/02/2024] Current Round: 12
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [*JC*]
+[05/02/2024] In builder: [*JC*, *JS*]
+[05/02/2024] In builder: [*JC*, *JS*, *AD*]
+[05/02/2024] In builder: [*JC*, *JS*, *AD*, *AS*]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: AH
+[05/02/2024] Selected Card: 5H
+[05/02/2024] Selected Card: AC
+[05/02/2024] Selected Card: 5C
+[05/02/2024] Current Round: 1
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [*AH*]
+[05/02/2024] In builder: [*AH*, *5H*]
+[05/02/2024] In builder: [*AH*, *5H*, AC]
+[05/02/2024] In builder: [*AH*, *5H*, AC, 5C]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: AH
+[05/02/2024] Selected Card: AD
+[05/02/2024] Selected Card: 6H
+[05/02/2024] Selected Card: 6D
+[05/02/2024] Current Round: 1
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [*AH*]
+[05/02/2024] In builder: [*AH*, *AD*]
+[05/02/2024] In builder: [*AH*, *AD*, *6H*]
+[05/02/2024] In builder: [*AH*, *AD*, *6H*, *6D*]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: 7H
+[05/02/2024] Selected Card: 8H
+[05/02/2024] Selected Card: 2H
+[05/02/2024] Selected Card: 3H
+[05/02/2024] Current Round: 1
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [*7H*]
+[05/02/2024] In builder: [*7H*, *8H*]
+[05/02/2024] In builder: [*7H*, *8H*, *2H*]
+[05/02/2024] In builder: [*7H*, *8H*, *2H*, *3H*]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: AC
+[05/02/2024] Selected Card: KC
+[05/02/2024] Selected Card: QC
+[05/02/2024] Selected Card: JC
+[05/02/2024] Selected Card: 2C
+[05/02/2024] Current Round: 2
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [*AC*]
+[05/02/2024] In builder: [*AC*, *KC*]
+[05/02/2024] In builder: [*AC*, *KC*, *QC*]
+[05/02/2024] In builder: [*AC*, *KC*, *QC*, *2C*]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: 5C
+[05/02/2024] Selected Card: 6C
+[05/02/2024] Selected Card: 7C
+[05/02/2024] Selected Card: 8C
+[05/02/2024] Selected Card: 9C
+[05/02/2024] Current Round: 2
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [*5C*]
+[05/02/2024] In builder: [*5C*, *6C*]
+[05/02/2024] In builder: [*5C*, *6C*, *7C*]
+[05/02/2024] In builder: [*5C*, *6C*, *7C*, *9C*]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: 5C
+[05/02/2024] Selected Card: 6C
+[05/02/2024] Selected Card: 7C
+[05/02/2024] Selected Card: 8C
+[05/02/2024] Current Round: 3
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [5C]
+[05/02/2024] In builder: [5C, 6C]
+[05/02/2024] In builder: [5C, 6C, 7C]
+[05/02/2024] In builder: [5C, 6C, 7C, 8C]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: KC
+[05/02/2024] Selected Card: QC
+[05/02/2024] Selected Card: JC
+[05/02/2024] Selected Card: KS
+[05/02/2024] Current Round: 3
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [*KC*]
+[05/02/2024] In builder: [*KC*, *QC*]
+[05/02/2024] In builder: [*KC*, *QC*, *JC*]
+[05/02/2024] In builder: [*KC*, *QC*, *JC*, *KS*]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Selected Card: QS
+[05/02/2024] Selected Card: JS
+[05/02/2024] Selected Card: KD
+[05/02/2024] Selected Card: JD
+[05/02/2024] Current Round: 3
+[05/02/2024] Writing to: CardsDealt.txt
+[05/02/2024] In builder: [*QS*]
+[05/02/2024] In builder: [*QS*, *JS*]
+[05/02/2024] In builder: [*QS*, *JS*, *KD*]
+[05/02/2024] In builder: [*QS*, *JS*, *KD*, *JD*]
+[05/02/2024] Writing to: ArtDealersSelection.txt
+[05/02/2024] Clearing card panel...
+[05/02/2024] Card panel cleared.
+[05/02/2024] Quitting game...

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.*;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -23,6 +24,7 @@ public class GameMethods {
     private static int roundCount;
     private static char highestRank = '2';
     private static List<String> correctChoices = new ArrayList<>();
+    private static String soundEffectAbsPath = "/congrats.wav";
 
     // Author: Kris Bosco
     // Main game method to check user's selection with current rounds pattern
@@ -165,63 +167,63 @@ public class GameMethods {
         switch (round) {
             case 1:
                 message = "USER HAS WON PATTERN: 1";
-                playSound("/Users/karlinbarnes/IdeaProjects/HW 5/src/congrats.wav");//insert sound effect here
+                playSound(soundEffectAbsPath);//insert sound effect here
                 JOptionPane.showMessageDialog(null, "Congratulations! The Art Dealer is quite pleased with all these red cards!");
                 break;
             case 2:
                 message = "USER HAS WON PATTERN: 2";
-                playSound("/Users/karlinbarnes/IdeaProjects/HW 5/src/congrats.wav");//insert sound effect here
+                playSound(soundEffectAbsPath);//insert sound effect here
                 JOptionPane.showMessageDialog(null, "Congratulations! The Art Dealer is going clubbin now!");
                 break;
             case 3:
                 message = "USER HAS WON PATTERN: 3";
-                playSound("/Users/karlinbarnes/IdeaProjects/HW 5/src/congrats.wav");//insert sound effect here
+                playSound(soundEffectAbsPath);//insert sound effect here
                 JOptionPane.showMessageDialog(null, "Congratulations! The Art Dealer has made some new friends!");
                 break;
             case 4:
                 message = "USER HAS WON PATTERN: 4";
-                playSound("/Users/karlinbarnes/IdeaProjects/HW 5/src/congrats.wav");//insert sound effect here
+                playSound(soundEffectAbsPath);//insert sound effect here
                 JOptionPane.showMessageDialog(null, "Congratulations! The Art Dealer is happy you singled out the good cards for him");
                 break;
             case 5:
                 message = "USER HAS WON PATTERN: 5";
-                playSound("/Users/karlinbarnes/IdeaProjects/HW 5/src/congrats.wav");//insert sound effect here
+                playSound(soundEffectAbsPath);//insert sound effect here
                 JOptionPane.showMessageDialog(null, "Congratulations! The Art Dealer is at his prime now!");
                 break;
             case 6:
                 message = "USER HAS WON PATTERN: 6";
-                playSound("/Users/karlinbarnes/IdeaProjects/HW 5/src/congrats.wav");//insert sound effect here
+                playSound(soundEffectAbsPath);//insert sound effect here
                 JOptionPane.showMessageDialog(null, "Congratulations! The Art Dealer only wanted the best you had to offer!");
                 break;
             case 7:
                 message = "USER HAS WON PATTERN: 7";
-                playSound("/Users/karlinbarnes/IdeaProjects/HW 5/src/congrats.wav");//insert sound effect here
+                playSound(soundEffectAbsPath);//insert sound effect here
                 JOptionPane.showMessageDialog(null, "Congratulations! The Art Dealer is impressed with this rising run!");
                 break;
             case 8:
                 message = "USER HAS WON PATTERN: 8";
-                playSound("/Users/karlinbarnes/IdeaProjects/HW 5/src/congrats.wav");//insert sound effect here
+                playSound(soundEffectAbsPath);//insert sound effect here
                 JOptionPane.showMessageDialog(null, "Congratulations! The Art Dealer skips in joy 2 feet at a time!");
                 break;
             case 9:
                 message = "USER HAS WON PATTERN: 9";
-                playSound("/Users/karlinbarnes/IdeaProjects/HW 5/src/congrats.wav");//insert sound effect here
+                playSound(soundEffectAbsPath);//insert sound effect here
                 JOptionPane.showMessageDialog(null, "Congratulations! The Art Dealer accepts the sum of 11s!");
                 break;
             case 10:
                 message = "USER HAS WON PATTERN: 10";
-                playSound("/Users/karlinbarnes/IdeaProjects/HW 5/src/congrats.wav");//insert sound effect here
+                playSound(soundEffectAbsPath);//insert sound effect here
                 JOptionPane.showMessageDialog(null, "Congratulations! The Art Dealer noticed you, Ace... and all of those eights!");
                 break;
             case 11:
                 message = "USER HAS WON PATTERN: 11";
-                playSound("/Users/karlinbarnes/IdeaProjects/HW 5/src/congrats.wav");//insert sound effect here
+                playSound(soundEffectAbsPath);//insert sound effect here
                 JOptionPane.showMessageDialog(null, "Congratulations! The Art Dealer pays top dollar for this Royal Flush!");
                 break;
             case 12:
                 message = "USER HAS WON PATTERN: 12";
-                playSound("/Users/karlinbarnes/IdeaProjects/HW 5/src/congrats.wav");//insert sound effect here
-                JOptionPane.showMessageDialog(null, "Congratulations! The Art Dealer pull out the wallet for those Black Jacks!");
+                playSound(soundEffectAbsPath);//insert sound effect here
+                JOptionPane.showMessageDialog(null, "Congratulations! The Art Dealer pulls out the wallet for those Black Jacks!");
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "Something went wrong.");
@@ -460,6 +462,7 @@ public class GameMethods {
 
     //Author: Karlin Clabon-Barnes
     //Method to check if a hand of cards has a rising sequence of ranks - all with the same suit.
+    //Returns true if a rising run within the same suit is detected.
     private static boolean risingRunSameSuit(List<String> selectedCards){
         int risingRun = 1;
 
@@ -487,7 +490,8 @@ public class GameMethods {
     }
 
     //Author: Karlin Clabon-Barnes
-    //Method to allow tracking of adds to eleven pattern. - Returns true if at least one instance is found.
+    //Method that checks for combinations of cards that add to 11.
+    // Returns true if at least one instance is found.
     private static boolean addsToEleven(List<String> selectedCards) {
 
         List<List<String>> validCombinations = new ArrayList<>();
@@ -510,8 +514,8 @@ public class GameMethods {
 
         return !validCombinations.isEmpty();
     }
-
-
+    //Author: Karlin Clabon-Barnes
+    // Recursive method that parses through all possibilities of card combinations.
     private static void findCombinations(List<String> selectedCards, List<List<String>> validCombinations, List<String> current, int start, int targetSum) {
         if (current.size() > 1 && sumOfCards(current) == targetSum) {
             validCombinations.add(new ArrayList<>(current));
@@ -526,7 +530,8 @@ public class GameMethods {
         }
     }
 
-
+    //Author: Karlin Clabon-Barnes
+    //Method to sum ranks of cards.
     private static int sumOfCards(List<String> cards) {
         int sum = 0;
         for (String card : cards) {
@@ -536,7 +541,8 @@ public class GameMethods {
         return sum;
     }
     //Author: Karlin Clabon-Barnes
-    //Method to allow the skipping by two same suit pattern
+    //Method that tracks a pattern of skipping by two (2,4,6,8; 3,5,7,9) within the same suit.
+    //Returns true if this pattern is found.
     private static boolean skippingBy2AnySuit(List<String> selectedCards){
         int skippingBy2 = 1;//initialize the variable to one, so we can check the final three cards.
         //char firstRank = selectedCards.get(0).charAt(0);
@@ -560,7 +566,8 @@ public class GameMethods {
     }
 
     //Author: Karlin Clabon-Barnes
-    //Method to allow the aces and eights pattern
+    //Method to check if only aces and eights cards have been selected.
+    //Returns true if only aces and eights cards are found.
     private static boolean acesAndEights(List<String> selectedCards) {
         int aces = 0;
         int eights = 0;
@@ -585,7 +592,8 @@ public class GameMethods {
     }
 
     //Author: Karlin Clabon-Barnes
-    //Method to allow the royal Flush pattern
+    //Method to detect if only face cards within the same suit.
+    //Returns true if only face cards within the same suit have been selected.
     private static boolean royalFlush(List<String> selectedCards){
         char sameSuit = selectedCards.get(0).charAt(1);//suit of first card
         // variables that allow tracking of various types of cards
@@ -621,7 +629,8 @@ public class GameMethods {
         return royalFlush == 4;
     }
     //Author: Karlin Clabon-Barnes
-    //Method to allow the two black jack combos method
+    //Method detects two black jacks and two aces of any suits.
+    //Returns true if only the two black jacks and two different aces are selected.
     private static boolean twoBlackJackCombos(List<String> selectedCards){
         int jackClub = 0;
         int jackSpades = 0;
@@ -650,7 +659,7 @@ public class GameMethods {
     }
 
     //Author: Karlin Clabon-Barnes
-    //Method used in addsToEleven to assign and return numeric values of card ranks.
+    //Method used in pattern finding game methods to assign and return numeric values of card ranks.
     private static int getCardNumericValue(char rank) {
         switch(rank) {
             case 'A': return 1; // Ace as 1
@@ -682,557 +691,34 @@ public class GameMethods {
 
     //Author: Karlin Clabon-Barnes
     //Method to allow congratulatory sound effect to play upon user winning round.
-    public static void playSound(String soundFileName) {
-            try {
-                // Open an audio input stream from the sound file
-                File soundFile = new File(soundFileName);
-                AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
+    public static void playSound(String resourcePath) {
+        try {
+            // Obtain a URL to the resource
+            URL url = GameMethods.class.getResource(resourcePath);
+            AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
 
-                // Get a sound clip resource
-                Clip clip = AudioSystem.getClip();
+            // Get a sound clip resource
+            Clip clip = AudioSystem.getClip();
 
-                // Open audio clip and load samples from the audio input stream
-                clip.open(audioIn);
-                clip.start(); // Start playing the sound clip
+            // Open audio clip and load samples from the audio input stream
+            clip.open(audioIn);
+            clip.start(); // Start playing the sound
 
-            } catch (UnsupportedAudioFileException e) {
-                System.err.println("Unsupported audio file format.");
-                e.printStackTrace();
-            } catch (IOException e) {
-                System.err.println("Error reading audio file.");
-                e.printStackTrace();
-            } catch (LineUnavailableException e) {
-                System.err.println("Audio line unavailable.");
-                e.printStackTrace();
-            }
+        } catch (UnsupportedAudioFileException e) {
+            System.err.println("Unsupported audio file format.");
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.err.println("Error reading audio file.");
+            e.printStackTrace();
+        } catch (LineUnavailableException e) {
+            System.err.println("Audio line unavailable.");
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            System.err.println("Sound file not found in resources.");
+            e.printStackTrace();
         }
+    }
+
 
 
 }
-
-/*
-        List<List<String>> validCombinations = new ArrayList<>();
-        Set<String> usedCards = new HashSet<>(); // To track which cards have been used in valid combinations
-
-
-
-
-        int totalCombinations = 1 << selectedCards.size(); // Calculate 2^number of cards, total subsets
-        for (int i = 1; i < totalCombinations; i++) {// Iterating through number of combinations
-            List<String> currentCombination = new ArrayList<>();// Current combination
-            int sum = 0;
-            for (int j = 0; j < selectedCards.size(); j++) {
-                if ((i & (1 << j)) != 0) { // Check if the j-th element is in the subset
-                    currentCombination.add(selectedCards.get(j));
-                    sum += cardValues[j];
-                }
-            }
-            if (sum == 11)
-            //MOVED CODE UP
-        }
-
-        // Mark all valid combinations
-        for (List<String> combination : validCombinations) {
-            for (String card : combination) {
-                builder(card, true);
-            }
-        }
-
-        // Check for any cards not used in valid combinations and mark them as false
-        for (String card : selectedCards) {
-            if (!usedCards.contains(card)) {
-                builder(card, false);
-            }
-        }
-
-
-        return !validCombinations.isEmpty();
-        */
-
-
-
-// SECOND ITERATION OF ADDS TO ELEVEN - I HONESTLY THINK THAT THE NESTED FOR LOOPS ARE UNNECESSARY.
-// WE ARE ALREADY PROCESSING ALL POSSIBILITIES - SO THERE IS NO NEED TO LOOP THROUGH ANYTHING.
-
-/*
-private static boolean addsToEleven(List<String> selectedCards) {
-        List<List<String>> validCombinations = new ArrayList<>();// Holds all valid combinations that add to 11.
-        int[] cardValues = new int[selectedCards.size()];// Holds values of card ranks.
-        Set<String> usedCards = new HashSet<>(); // To track which cards have been used in valid combinations no duplicates
-
-        for (int i = 0; i < selectedCards.size(); i++) {
-            char rank = selectedCards.get(i).charAt(0);
-            cardValues[i] = getCardNumericValue(rank);// Crucial usage: for loop below iterates primarily through this array.
-        }
-        int firstRank = cardValues[0];
-        int secondRank = cardValues[1];
-        int thirdRank = cardValues[2];
-        int fourthRank = cardValues[3];
-
-
-        for(int i = 0; i < selectedCards.size(); i++){// i = 0 (first card)
-            //moving rank declarations
-            for(int j = i+1; j < selectedCards.size(); j++){// j = 1 (second card)
-                for(int k = j+1; k < selectedCards.size(); k++){// k = 2 (third card)
-                    for(int m = k+1; m < selectedCards.size(); m++){// m = 3 (fourth card)
-                        //ListArray statement moved down.
-                        // 1
-                        if(firstRank + secondRank + thirdRank + fourthRank == 11){
-                            List<String> combination_1 = new ArrayList<>();// Current combination
-                            combination_1.add(selectedCards.get(0));
-                            combination_1.add(selectedCards.get(j));
-                            combination_1.add(selectedCards.get(k));
-                            combination_1.add(selectedCards.get(m));
-                            validCombinations.add(combination_1); // Store valid combination
-                            usedCards.addAll(combination_1); // Mark these cards as used w/ no duplicates
-                        // 2
-                        }if(firstRank + secondRank + thirdRank == 11){
-                            List<String> combination_2 = new ArrayList<>();// Current combination
-                            combination_2.add(selectedCards.get(i));
-                            combination_2.add(selectedCards.get(j));
-                            combination_2.add(selectedCards.get(k));
-                            validCombinations.add(combination_2); // Store valid combination
-                            usedCards.addAll(combination_2); // Mark these cards as used
-                        // 3
-                        }if(secondRank + thirdRank + fourthRank == 11){// 2 3 4
-                            List<String> combination_3 = new ArrayList<>();// Current combination
-                            combination_3.add(selectedCards.get(j));
-                            combination_3.add(selectedCards.get(k));
-                            combination_3.add(selectedCards.get(m));
-                            validCombinations.add(combination_3); // Store valid combination
-                            usedCards.addAll(combination_3); // Mark these cards as used
-                        // 4
-                        }if(firstRank + secondRank + fourthRank == 11){// 1 2 4
-                            List<String> combination_4 = new ArrayList<>();// Current combination
-                            combination_4.add(selectedCards.get(i));
-                            combination_4.add(selectedCards.get(j));
-                            combination_4.add(selectedCards.get(m));
-                            validCombinations.add(combination_4); // Store valid combination
-                            usedCards.addAll(combination_4); // Mark these cards as used
-                        // 5
-                        }if(firstRank + thirdRank + fourthRank == 11){
-                            List<String> combination_5 = new ArrayList<>();// Current combination
-                            combination_5.add(selectedCards.get(i));
-                            combination_5.add(selectedCards.get(k));
-                            combination_5.add(selectedCards.get(m));
-                            validCombinations.add(combination_5); // Store valid combination
-                            usedCards.addAll(combination_5); // Mark these cards as used
-                        // 6
-                        }if(firstRank + secondRank == 11){
-                            List<String> combination_6 = new ArrayList<>();// Current combination
-                            combination_6.add(selectedCards.get(i));
-                            combination_6.add(selectedCards.get(j));
-                            validCombinations.add(combination_6); // Store valid combination
-                            usedCards.addAll(combination_6); // Mark these cards as used
-                        // 7
-                        }if(firstRank + thirdRank == 11){
-                            List<String> combination_7 = new ArrayList<>();// Current combination
-                            combination_7.add(selectedCards.get(i));
-                            combination_7.add(selectedCards.get(k));
-                            validCombinations.add(combination_7); // Store valid combination
-                            usedCards.addAll(combination_7); // Mark these cards as used
-                        // 8
-                        }if(firstRank + fourthRank == 11){
-                            List<String> combination_8 = new ArrayList<>();// Current combination
-                            combination_8.add(selectedCards.get(i));
-                            combination_8.add(selectedCards.get(m));
-                            validCombinations.add(combination_8); // Store valid combination
-                            usedCards.addAll(combination_8); // Mark these cards as used
-                        // 9
-                        }if(secondRank + thirdRank == 11){
-                            List<String> combination_9 = new ArrayList<>();// Current combination
-                            combination_9.add(selectedCards.get(j));
-                            combination_9.add(selectedCards.get(k));
-                            validCombinations.add(new ArrayList<>(combination_9)); // Store valid combination
-                            usedCards.addAll(combination_9); // Mark these cards as used
-                        // 10
-                        }if(secondRank + fourthRank == 11){
-                            List<String> combination_10 = new ArrayList<>();// Current combination
-                            combination_10.add(selectedCards.get(j));
-                            combination_10.add(selectedCards.get(m));
-                            validCombinations.add(new ArrayList<>(combination_10)); // Store valid combination
-                            usedCards.addAll(combination_10); // Mark these cards as used
-                        // 11
-                        }if(thirdRank + fourthRank == 11){
-                            List<String> combination_11 = new ArrayList<>();// Current combination
-                            combination_11.add(selectedCards.get(k));
-                            combination_11.add(selectedCards.get(m));
-                            validCombinations.add(new ArrayList<>(combination_11)); // Store valid combination
-                            usedCards.addAll(combination_11); // Mark these cards as used
-                        }
-                    }
-                }
-            }
-        }
-
-        // Mark all valid combinations
-        for (List<String> combination : validCombinations) {
-            for (String card : combination) {
-                builder(card, true);
-            }
-        }
-
-        // Check for any cards not used in valid combinations and mark them as false
-        for (String card : selectedCards) {
-            if (!usedCards.contains(card)) {
-                builder(card, false);
-            }
-        }
-        return !validCombinations.isEmpty();
-    }
-* */
-
-// THIRD INSTANCE OF ADDSTOELEVEN
-
-/*
-* private static boolean addsToEleven(List<String> selectedCards) {
-        List<List<String>> validCombinations = new ArrayList<>();// Holds all valid combinations that add to 11.
-        int[] cardValues = new int[selectedCards.size()];// Holds values of card ranks.
-        Set<String> usedCards = new HashSet<>(); // To track which cards have been used in valid combinations no duplicates
-
-        // Crucial usage: for loop below iterates primarily through this array.
-        for (int i = 0; i < selectedCards.size(); i++) {
-            char rank = selectedCards.get(i).charAt(0);
-            cardValues[i] = getCardNumericValue(rank);
-        }
-        // Initialize the ranks according to card order.
-        int firstRank = cardValues[0];//rank of first card stored in cardValues
-        int secondRank = cardValues[1];
-        int thirdRank = cardValues[2];
-        int fourthRank = cardValues[3];
-
-        //Trying the 11 combinations with 11 different for loops below.
-        if(firstRank + secondRank + thirdRank + fourthRank == 11){
-            List<String> combination_1 = new ArrayList<>();// allocate for this combination
-            combination_1.add(selectedCards.get(0));
-            combination_1.add(selectedCards.get(1));
-            combination_1.add(selectedCards.get(2));
-            combination_1.add(selectedCards.get(3));
-            validCombinations.add(combination_1); // Store valid combination
-            usedCards.addAll(combination_1); // Mark these cards as used w/ no duplicates
-            // 2
-        }if(firstRank + secondRank + thirdRank == 11){
-            List<String> combination_2 = new ArrayList<>();// Current combination
-            combination_2.add(selectedCards.get(0));
-            combination_2.add(selectedCards.get(1));
-            combination_2.add(selectedCards.get(2));
-            validCombinations.add(combination_2); // Store valid combination
-            usedCards.addAll(combination_2); // Mark these cards as used
-            // 3
-        }if(secondRank + thirdRank + fourthRank == 11){// 2 3 4
-            List<String> combination_3 = new ArrayList<>();// Current combination
-            combination_3.add(selectedCards.get(1));
-            combination_3.add(selectedCards.get(2));
-            combination_3.add(selectedCards.get(3));
-            validCombinations.add(combination_3); // Store valid combination
-            usedCards.addAll(combination_3); // Mark these cards as used
-            // 4
-        }if(firstRank + secondRank + fourthRank == 11){// 1 2 4
-            List<String> combination_4 = new ArrayList<>();// Current combination
-            combination_4.add(selectedCards.get(0));
-            combination_4.add(selectedCards.get(1));
-            combination_4.add(selectedCards.get(3));
-            validCombinations.add(combination_4); // Store valid combination
-            usedCards.addAll(combination_4); // Mark these cards as used
-            // 5
-        }if(firstRank + thirdRank + fourthRank == 11){
-            List<String> combination_5 = new ArrayList<>();// Current combination
-            combination_5.add(selectedCards.get(0));
-            combination_5.add(selectedCards.get(2));
-            combination_5.add(selectedCards.get(3));
-            validCombinations.add(combination_5); // Store valid combination
-            usedCards.addAll(combination_5); // Mark these cards as used
-            // 6
-        }if(firstRank + secondRank == 11){
-            List<String> combination_6 = new ArrayList<>();// Current combination
-            combination_6.add(selectedCards.get(0));
-            combination_6.add(selectedCards.get(1));
-            validCombinations.add(combination_6); // Store valid combination
-            usedCards.addAll(combination_6); // Mark these cards as used
-            // 7
-        }if(firstRank + thirdRank == 11){
-            List<String> combination_7 = new ArrayList<>();// Current combination
-            combination_7.add(selectedCards.get(0));
-            combination_7.add(selectedCards.get(2));
-            validCombinations.add(combination_7); // Store valid combination
-            usedCards.addAll(combination_7); // Mark these cards as used
-            // 8
-        }if(firstRank + fourthRank == 11){
-            List<String> combination_8 = new ArrayList<>();// Current combination
-            combination_8.add(selectedCards.get(0));
-            combination_8.add(selectedCards.get(3));
-            validCombinations.add(combination_8); // Store valid combination
-            usedCards.addAll(combination_8); // Mark these cards as used
-            // 9
-        }if(secondRank + thirdRank == 11){
-            List<String> combination_9 = new ArrayList<>();// Current combination
-            combination_9.add(selectedCards.get(1));
-            combination_9.add(selectedCards.get(2));
-            validCombinations.add(new ArrayList<>(combination_9)); // Store valid combination
-            usedCards.addAll(combination_9); // Mark these cards as used
-            // 10
-        }if(secondRank + fourthRank == 11){
-            List<String> combination_10 = new ArrayList<>();// Current combination
-            combination_10.add(selectedCards.get(1));
-            combination_10.add(selectedCards.get(3));
-            validCombinations.add(new ArrayList<>(combination_10)); // Store valid combination
-            usedCards.addAll(combination_10); // Mark these cards as used
-            // 11
-        }if(thirdRank + fourthRank == 11){
-            List<String> combination_11 = new ArrayList<>();// Current combination
-            combination_11.add(selectedCards.get(2));
-            combination_11.add(selectedCards.get(3));
-            validCombinations.add(new ArrayList<>(combination_11)); // Store valid combination
-            usedCards.addAll(combination_11); // Mark these cards as used
-        }
-
-
-        // Mark all valid combinations and send to builder
-        for (List<String> combination : validCombinations) {
-            for (String card : combination) {
-                builder(card, true);
-            }
-        }
-
-        // Check for any cards not used in valid combinations and mark them as false
-        for (String card : selectedCards) {
-            if (!usedCards.contains(card)) {
-                builder(card, false);
-            }
-        }
-
-
-        return !validCombinations.isEmpty();
-    }*/
-
-//HOPEFULLY THE LAST TIME
-/*
-* //Trying the 11 combinations with 11 different for loops below.
-        if(firstRank + secondRank + thirdRank + fourthRank == 11){
-            ArrayList<String> combination_1 = new ArrayList<>();// allocate for this combination
-            combination_1.add(selectedCards.get(0));
-            combination_1.add(selectedCards.get(1));
-            combination_1.add(selectedCards.get(2));
-            combination_1.add(selectedCards.get(3));
-            validCombinations.add(combination_1); // Store valid combination
-            //usedCards.addAll(combination_1);
-            // Mark these cards as used w/ no duplicates
-            // 2
-        }if(firstRank + secondRank + thirdRank == 11){
-            ArrayList<String> combination_2 = new ArrayList<>();// Current combination
-            combination_2.add(selectedCards.get(0));
-            combination_2.add(selectedCards.get(1));
-            combination_2.add(selectedCards.get(2));
-            validCombinations.add(combination_2); // Store valid combination
-            //usedCards.addAll(combination_2); // Mark these cards as used
-            // 3
-        }if(secondRank + thirdRank + fourthRank == 11){// 2 3 4
-            ArrayList<String> combination_3 = new ArrayList<>();// Current combination
-            combination_3.add(selectedCards.get(1));
-            combination_3.add(selectedCards.get(2));
-            combination_3.add(selectedCards.get(3));
-            validCombinations.add(combination_3); // Store valid combination
-            //usedCards.addAll(combination_3); // Mark these cards as used
-            // 4
-        }if(firstRank + secondRank + fourthRank == 11){// 1 2 4
-            ArrayList<String> combination_4 = new ArrayList<>();// Current combination
-            combination_4.add(selectedCards.get(0));
-            combination_4.add(selectedCards.get(1));
-            combination_4.add(selectedCards.get(3));
-            validCombinations.add(combination_4); // Store valid combination
-            //usedCards.addAll(combination_4); // Mark these cards as used
-            // 5
-        }if(firstRank + thirdRank + fourthRank == 11){
-            ArrayList<String> combination_5 = new ArrayList<>();// Current combination
-            combination_5.add(selectedCards.get(0));
-            combination_5.add(selectedCards.get(2));
-            combination_5.add(selectedCards.get(3));
-            validCombinations.add(combination_5); // Store valid combination
-            //usedCards.addAll(combination_5); // Mark these cards as used
-            // 6
-        }if(firstRank + secondRank == 11){
-            ArrayList<String> combination_6 = new ArrayList<>();// Current combination
-            combination_6.add(selectedCards.get(0));
-            combination_6.add(selectedCards.get(1));
-            validCombinations.add(combination_6); // Store valid combination
-            //usedCards.addAll(combination_6); // Mark these cards as used
-            // 7
-        }if(firstRank + thirdRank == 11){
-            ArrayList<String> combination_7 = new ArrayList<>();// Current combination
-            combination_7.add(selectedCards.get(0));
-            combination_7.add(selectedCards.get(2));
-            validCombinations.add(combination_7); // Store valid combination
-            //usedCards.addAll(combination_7); // Mark these cards as used
-            // 8
-        }if(firstRank + fourthRank == 11){
-            ArrayList<String> combination_8 = new ArrayList<>();// Current combination
-            combination_8.add(selectedCards.get(0));
-            combination_8.add(selectedCards.get(3));
-            validCombinations.add(combination_8); // Store valid combination
-            //usedCards.addAll(combination_8); // Mark these cards as used
-            // 9
-        }if(secondRank + thirdRank == 11){
-            ArrayList<String> combination_9 = new ArrayList<>();// Current combination
-            combination_9.add(selectedCards.get(1));
-            combination_9.add(selectedCards.get(2));
-            validCombinations.add(combination_9); // Store valid combination
-            //usedCards.addAll(combination_9); // Mark these cards as used
-            // 10
-        }if(secondRank + fourthRank == 11){
-            ArrayList<String> combination_10 = new ArrayList<>();// Current combination
-            combination_10.add(selectedCards.get(1));
-            combination_10.add(selectedCards.get(3));
-            validCombinations.add(combination_10); // Store valid combination
-            //usedCards.addAll(combination_10); // Mark these cards as used
-            // 11
-        }if(thirdRank + fourthRank == 11){
-            ArrayList<String> combination_11 = new ArrayList<>();// Current combination
-            combination_11.add(selectedCards.get(2));
-            combination_11.add(selectedCards.get(3));
-            validCombinations.add(combination_11); // Store valid combination
-            //usedCards.addAll(combination_11); // Mark these cards as used
-        }
-
-* */
-
-/*
-* ArrayList<ArrayList<String>> validCombinations = new ArrayList<>();// Holds all valid combinations that add to 11.
-        int[] cardValues = new int[selectedCards.size()];// Holds values of card ranks.
-        Set<String> usedCards = new HashSet<>(); // To track which cards have been used in valid combinations no duplicates
-        // Crucial usage: for loop below iterates primarily through this array.
-        for (int i = 0; i < selectedCards.size(); i++) {
-            char rank = selectedCards.get(i).charAt(0);
-            cardValues[i] = getCardNumericValue(rank);
-        }
-        // Initialize the ranks according to card order.
-        int firstRank = cardValues[0];//rank of first card stored in cardValues
-        int secondRank = cardValues[1];
-        int thirdRank = cardValues[2];
-        int fourthRank = cardValues[3];
-
-
-
-        // Mark all valid combinations and send to builder
-        for (ArrayList<String> combination : validCombinations) {
-            for (String card : combination) {
-                builder(card, true);
-            }
-        }
-
-        for (int i = 0; i < selectedCards.size(); i++) {
-            char rank = selectedCards.get(i).charAt(0);
-            cardValues[i] = getCardNumericValue(rank);// Crucial usage: for loop below iterates primarily through this array.
-            }
-
-
-        for(int i = 0; i < selectedCards.size(); i++){// i = 0 (first card)
-            //moving rank declarations
-            for(int j = i+1; j < selectedCards.size(); j++){// j = 1 (second card)
-                for(int k = j+1; k < selectedCards.size(); k++){// k = 2 (third card)
-                    for(int m = k+1; m < selectedCards.size(); m++){// m = 3 (fourth card)
-                        //ListArray statement moved down.
-                        // 1
-                        if(firstRank + secondRank + thirdRank + fourthRank == 11){
-                            List<String> combination_1 = new ArrayList<>();// Current combination
-                            combination_1.add(selectedCards.get(0));
-                            combination_1.add(selectedCards.get(j));
-                            combination_1.add(selectedCards.get(k));
-                            combination_1.add(selectedCards.get(m));
-                            validCombinations.add(combination_1); // Store valid combination
-                            usedCards.addAll(combination_1); // Mark these cards as used w/ no duplicates
-                                // 2
-                            }if(firstRank + secondRank + thirdRank == 11){
-                                List<String> combination_2 = new ArrayList<>();// Current combination
-                                combination_2.add(selectedCards.get(i));
-                                combination_2.add(selectedCards.get(j));
-                                combination_2.add(selectedCards.get(k));
-                                validCombinations.add(combination_2); // Store valid combination
-                                usedCards.addAll(combination_2); // Mark these cards as used
-                                // 3
-                            }if(secondRank + thirdRank + fourthRank == 11){// 2 3 4
-                                List<String> combination_3 = new ArrayList<>();// Current combination
-                                combination_3.add(selectedCards.get(j));
-                                combination_3.add(selectedCards.get(k));
-                                combination_3.add(selectedCards.get(m));
-                                validCombinations.add(combination_3); // Store valid combination
-                                usedCards.addAll(combination_3); // Mark these cards as used
-                                // 4
-                            }if(firstRank + secondRank + fourthRank == 11){// 1 2 4
-                                List<String> combination_4 = new ArrayList<>();// Current combination
-                                combination_4.add(selectedCards.get(i));
-                                combination_4.add(selectedCards.get(j));
-                                combination_4.add(selectedCards.get(m));
-                                validCombinations.add(combination_4); // Store valid combination
-                                usedCards.addAll(combination_4); // Mark these cards as used
-                                // 5
-                            }if(firstRank + thirdRank + fourthRank == 11){
-                                List<String> combination_5 = new ArrayList<>();// Current combination
-                                combination_5.add(selectedCards.get(i));
-                                combination_5.add(selectedCards.get(k));
-                                combination_5.add(selectedCards.get(m));
-                                validCombinations.add(combination_5); // Store valid combination
-                                usedCards.addAll(combination_5); // Mark these cards as used
-                                // 6
-                            }if(firstRank + secondRank == 11){
-                                List<String> combination_6 = new ArrayList<>();// Current combination
-                                combination_6.add(selectedCards.get(i));
-                                combination_6.add(selectedCards.get(j));
-                                validCombinations.add(combination_6); // Store valid combination
-                                usedCards.addAll(combination_6); // Mark these cards as used
-                                // 7
-                            }if(firstRank + thirdRank == 11){
-                                List<String> combination_7 = new ArrayList<>();// Current combination
-                                combination_7.add(selectedCards.get(i));
-                                combination_7.add(selectedCards.get(k));
-                                validCombinations.add(combination_7); // Store valid combination
-                                usedCards.addAll(combination_7); // Mark these cards as used
-                                // 8
-                            }if(firstRank + fourthRank == 11){
-                                List<String> combination_8 = new ArrayList<>();// Current combination
-                                combination_8.add(selectedCards.get(i));
-                                combination_8.add(selectedCards.get(m));
-                                validCombinations.add(combination_8); // Store valid combination
-                                usedCards.addAll(combination_8); // Mark these cards as used
-                                // 9
-                            }if(secondRank + thirdRank == 11){
-                                List<String> combination_9 = new ArrayList<>();// Current combination
-                                combination_9.add(selectedCards.get(j));
-                                combination_9.add(selectedCards.get(k));
-                                validCombinations.add(new ArrayList<>(combination_9)); // Store valid combination
-                                usedCards.addAll(combination_9); // Mark these cards as used
-                                // 10
-                            }if(secondRank + fourthRank == 11){
-                                List<String> combination_10 = new ArrayList<>();// Current combination
-                                combination_10.add(selectedCards.get(j));
-                                combination_10.add(selectedCards.get(m));
-                                validCombinations.add(new ArrayList<>(combination_10)); // Store valid combination
-                                usedCards.addAll(combination_10); // Mark these cards as used
-                                // 11
-                            }if(thirdRank + fourthRank == 11){
-                                List<String> combination_11 = new ArrayList<>();// Current combination
-                                combination_11.add(selectedCards.get(k));
-                                combination_11.add(selectedCards.get(m));
-                                validCombinations.add(new ArrayList<>(combination_11)); // Store valid combination
-                                usedCards.addAll(combination_11); // Mark these cards as used
-                            }
-                        }
-                    }
-                }
-            }
-
-            // Mark all valid combinations
-            for (List<String> combination : validCombinations) {
-                for (String card : combination) {
-                    builder(card, true);
-                }
-            }
-
-            // Check for any cards not used in valid combinations and mark them as false
-            for (String card : selectedCards) {
-                if (!usedCards.contains(card)) {
-                    builder(card, false);
-                }
-            }
-
-
-* */
