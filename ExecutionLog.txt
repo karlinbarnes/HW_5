@@ -1839,3 +1839,5 @@
 [05/05/2024] Writing to: ArtDealersSelection.txt
 [05/05/2024] Clearing card panel...
 [05/05/2024] Card panel cleared.
+[05/05/2024] Selected Card: 5C
+[05/05/2024] Selected Card: 5C

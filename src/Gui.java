@@ -57,8 +57,8 @@ public class Gui extends JFrame {
         quitButton = new JButton("Quit");
         displayButton = new JButton("History");
         welcomeLabel = new JLabel("<html><body>Card Selling Program. Built With Java.<br><br>" +
-                "HW4 Chief Programmer: Kris Bosco<br>" +
-                "Revision Date: March 24th, 2024<br><br>" +
+                "HW5 Chief Programmer: Karlin Clabon-Barnes<br>" +
+                "Revision Date: May 5th, 2024<br><br>" +
                 "Team Members: Kris Bosco, Jesse Gemple, Karlin Clabon-Barnes, Kyle Peniston<br>" +
                 "CMP_SCI-4500 Keith Miller<br><br>" +
                 "This program is a guessing game consisting of six rounds of challenges.<br>" +
