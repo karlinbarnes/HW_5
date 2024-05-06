@@ -1,17 +1,17 @@
 /*Project Title: The Art Dealer
  *
- * Homework 4 Chief Programmer: Kris Bosco
- * Date: 4/9/2024
+ * Homework 5 Chief Programmer: Karlin Clabon-Barnes
+ * Date: 5/5/2024
  *
  * Team Members: Kris Bosco, Jesse Gemple, Karlin Clabon-Barnes, Kyle Peniston
  * Class: CMP_SCI-4500 Keith Miller
  *
- * IDE: Visual Studio Code
+ * IDE: Intellij IDEA
  * Programming Language: Java
  *
  * Description:
  * Program is designed to simulate a user-interactive game simulating the use of a generated 52 card playing deck.
- * The game consists of six rounds of patterns the user will be able to play through.
+ * The game consists of 12 rounds of patterns the user will be able to play through.
  * The user's objective is to guess the pattern by selecting 4 of the 52 cards until the user is able to figure out what pattern
  * the program is wanting.
  *
